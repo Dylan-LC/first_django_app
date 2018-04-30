@@ -1,0 +1,13 @@
+{% extends "admin/base.html" %}
+
+{% block title %}{{ title }} | {{ site_title|default:_('Django site admin') }}{% endblock %}
+
+{% block branding %}
+<h1 id="site-name"><a href="{% url 'admin:index' %}">Polls administration</a></h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{#Note that any of Django’s default admin templates can be overridden. #}
+{#To override a template, just do the same thing you did with base_site.html #}
+{#– copy it from the default directory into your custom directory, and make changes.#}
